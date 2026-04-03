@@ -1,0 +1,46 @@
+{
+  "_comment": "기능 큐 파일. skills/auto-feature-runner.md 참조.",
+  "project": "[프로젝트명]",
+  "version": "1.0.0",
+  "created_at": "YYYY-MM-DD",
+  "auto_merge": false,
+  "stop_on_failure": true,
+  "stack": {
+    "frontend": "[React|Vue|없음]",
+    "backend": "[Java|Node.js|Python|없음]",
+    "test_command": "[npm test|./gradlew test|pytest]",
+    "lint_command": "node linters/layer-deps.js src/"
+  },
+  "summary": {
+    "total": 0,
+    "pending": 0,
+    "in_progress": 0,
+    "done": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "features": [
+    {
+      "id": "FEAT-001",
+      "title": "[기능 제목]",
+      "spec": "docs/specs/[스펙파일].md",
+      "status": "pending",
+      "priority": "P0",
+      "depends_on": [],
+      "estimated_human": "[N일]",
+      "estimated_ai": "[N분]",
+      "tags": ["backend", "auth"]
+    },
+    {
+      "id": "FEAT-002",
+      "title": "[기능 제목]",
+      "spec": "docs/specs/[스펙파일].md",
+      "status": "pending",
+      "priority": "P0",
+      "depends_on": ["FEAT-001"],
+      "estimated_human": "[N일]",
+      "estimated_ai": "[N분]",
+      "tags": ["frontend"]
+    }
+  ]
+}
