@@ -1,4 +1,4 @@
-# code-harness
+# code-harness-claude
 
 > Claude Code를 기반으로 소프트웨어를 자율적으로 개발할 수 있도록 설계된 엔지니어링 하네스입니다.
 > OpenAI Harness Engineering 방법론과 Garry Tan의 gstack을 참고하되,
@@ -106,7 +106,7 @@ npm install -g @anthropic-ai/claude-code
 
 # 하네스 적용 (기존 프로젝트)
 cd [프로젝트 루트]
-git clone https://github.com/kyle-heo/code-harness .harness-tmp
+git clone https://github.com/kyle-heo/code-harness-claude .harness-tmp
 cp -r .harness-tmp/* .
 rm -rf .harness-tmp
 
