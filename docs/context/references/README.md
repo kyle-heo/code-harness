@@ -21,4 +21,4 @@
 ## 갱신 방법
 
 `gc-jobs/doc-staleness-check.md`가 외부 라이브러리 버전과 대조하여
-stale 여부를 감지하면 Codex가 최신 문서를 재추출하여 갱신합니다.
+stale 여부를 감지하면 Claude Code가 최신 문서를 재추출하여 갱신합니다.

@@ -1,6 +1,6 @@
 # ARCHITECTURE.md
 > 이 파일의 규칙은 `linters/layer-deps.js`로 기계적으로 강제됩니다.
-> 규칙 변경 시 반드시 린터도 함께 수정하십시오 (Codex가 수행).
+> 규칙 변경 시 반드시 린터도 함께 수정하십시오 (Claude Code가 수행).
 
 ---
 

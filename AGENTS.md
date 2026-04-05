@@ -52,7 +52,7 @@ Types -> Config -> Repo -> Service -> Runtime -> UI
 1. SIGNALS.md > "## 최근 실패 로그" 섹션에 실패 항목 추가
 2. 버그/에러인 경우 → skills/investigate.md 4단계 절차 실행 (추측 기반 수정 금지)
 3. 누락된 도구/가드레일/문서가 무엇인지 명시
-4. Codex가 직접 수정 PR 오픈 (skills/pr-lifecycle.md 참조)
+4. Claude Code가 직접 수정 PR 오픈 (skills/pr-lifecycle.md 참조)
 5. gc-jobs/constraint-enforcer.md 트리거 조건 충족 시 자동 린터 재생성
 ```
 
@@ -60,7 +60,7 @@ Types -> Config -> Repo -> Service -> Runtime -> UI
 
 - **호수를 끓여라**: 시간 추정 시 반드시 "사람 N시간 / AI-assisted M분" 두 가지를 명시
 - **만들기 전에 검색하라**: 익숙하지 않은 패턴은 먼저 검색 후 구현
-- **사용자 주권**: 에이전트가 방향 변경에 동의해도 → 추천하고 물어보기, 행동 금지
+- **사용자 주권**: Claude Code가 방향 변경에 동의해도 → 추천하고 물어보기, 행동 금지
 
 → 상세 내용: `docs/ethos/ETHOS.md`
 

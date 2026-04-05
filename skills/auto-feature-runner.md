@@ -63,7 +63,7 @@
 
 ---
 
-## 자동 실행 루프 (Codex에게)
+## 자동 실행 루프 (Claude Code에게)
 
 ### 루프 시작 전 체크
 
@@ -130,7 +130,7 @@ pytest                      # Python
 ```
 실패 시 `skills/investigate.md` 절차로 근본 원인 파악 후 수정.
 
-#### Step 7: PR 리뷰 체크
+#### Step 7: 서브에이전트 병렬 리뷰
 ```bash
 # docs/quality/review/checklist.md Pass 1 실행
 # SQL 안전 / 경쟁 조건 / LLM 신뢰 경계 / 인젝션 / Enum 완전성

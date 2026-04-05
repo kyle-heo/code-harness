@@ -1,0 +1,37 @@
+{
+  "_comment": "Claude Code 프로젝트 설정. 파일 저장 시 린터를 자동 실행합니다.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'FILE=\"$TOOL_INPUT_PATH\"; if [[ \"$FILE\" =~ \\.(ts|tsx|js|jsx)$ ]]; then node linters/layer-deps.js \"$FILE\" 2>&1 && node linters/boundary-check.js \"$FILE\" 2>&1 && node linters/naming-conv.js \"$FILE\" 2>&1 && node linters/file-size.js \"$FILE\" 2>&1; fi'",
+            "statusMessage": "🔍 하네스 린터 실행 중 (C-001~C-007)..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'CMD=\"$TOOL_INPUT_COMMAND\"; if echo \"$CMD\" | grep -qE \"^(rm -rf|DROP TABLE|DROP DATABASE|git reset --hard|git push --force|kubectl delete)\"; then echo \"[CAREFUL] 위험 명령 감지: $CMD\" >&2; echo \"계속하려면 사용자 확인이 필요합니다.\" >&2; exit 2; fi'",
+            "statusMessage": "⚠️ 위험 명령 검사 중..."
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(node linters/*)",
+      "Bash(npm test*)",
+      "Bash(git *)",
+      "Bash(gh *)"
+    ]
+  }
+}
